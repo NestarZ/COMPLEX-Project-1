@@ -1,6 +1,0 @@
-import numpy as np
-n = 3
-X = list(range(1,n))
-G = None
-D = None
-d = np.array([[2, 3, 4],[2, 3, 5], [9, 4, 1]])
