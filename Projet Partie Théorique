@@ -1,0 +1,57 @@
+# COMPLEX-Project-1
+## Partie Théorique : Questions 4 à 6
+
+Conditions Initiales
+- $\pi$ = début de la permutation des tâches
+- $ t_A^\pi $  = durée pour traiter $\pi$ tâches sur $M_A$
+- $t_B^\pi$ = durée pour traiter $\pi$ tâches sur $M_A$ et $M_B$
+- $t_C^\pi$ = durée pour traiter $\pi$ tâches sur $M_A$ et $M_B$ et $M_C$
+
+$$ b_A^\pi = t_A^\pi + \sum_{i \in \pi' }d_A^i + min_{i \in \pi'}\{d_B^i + d_C^i\} $$
+=> On choisit une tache $i \in \pi'$ tq  $d_B^i + d_C^i$ soit min pour " finir rapidement à la fin"
+
+de même manière,
+
+$$b_B^\pi = t_B^\pi + \sum_{i \in \pi'}d_B^i + min\{d_C^i\}$$
+$$b_A^\pi = t_C^\pi + \sum_{ i \in \pi'}d_C^i $$
+
+### Question 4
+
+soit $ \Delta = t_A^pi + \sum_{i \in \pi' }d_A^i - t_B^\pi$
+
+La tache $i$ ne peut pas commencer dans la machine $B$ avant sa fin dans la machine $A$
+
+donc
+
+$$ b_B^\pi = t_B^\pi + \sum_{i \in \pi'/ min(i) }d_B^i + d_B^{min(i)} + delta + min\{d_C^i\}$$
+
+
+### Question 5
+
+montrez que $\forall P$ permutation des tâches commençant par $\pi$
+
+$\forall k\in \pi'$
+$$ C_M^P \geq t_A^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k}min\{d_A^i,d_C^i\} $$
+
+**Réponse**
+
+- $t_A^\pi$ = durée de la permutation $\pi$
+- $ (d_A^k+d_B^k+d_C^k)$ = durée minimale de la tâche $k$
+
+- Il y a 3 cas :
+  1. quand k est la première tâche de $\pi'$
+  2. quand k est la dernière tâche de $\pi'$
+  3. quand k est au milieu
+
+1re cas: on ne compte que $\{d_C^i\}$
+2e cas : on ne compte que $\{d_A^i\}$
+3e cas : on compte $\{d_A^i\}$ avant la tâche k et $\{d_C^i\}$ après la tâche k
+
+### Question 6
+
+Avec la Question 5, on a :
+$$ b'_1 = t_A^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k}min\{d_A^i,d_C^i\} $$
+de même manière, on a
+$$ b'_2 = t_B^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k}min\{d_B^i,d_C^i\} $$
+
+$$ b'_3 = t_C^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k } d_C^i $$
