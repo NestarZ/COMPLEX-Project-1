@@ -1,4 +1,16 @@
 # COMPLEX-Project-1
+## Question 1
+
+$\sum_{i \in I}d_A^i + d_B^i + d_C^i = \sum_{i \in I}d_A^i + \sum_{i \in I}d_B^i \sum_{i \in I}d_C^i \leq 3*max\{d_A^i,d_B^i,d_C^i\}$
+
+or $max\{d_A^i,d_B^i,d_C^i\} \leq OPT$
+
+Donc $OPT \geq \frac{\sum_{i \in I}d_A^i + d_B^i + d_C^i}{3}$
+
+Donc  $3 \geq \frac{\sum_{i \in I}d_A^i + d_B^i + d_C^i}{OPT}$
+
+L'ordonnancement associé à P est donc 3-approché
+
 ## Partie Théorique : Questions 4 à 6
 
 Conditions Initiales
