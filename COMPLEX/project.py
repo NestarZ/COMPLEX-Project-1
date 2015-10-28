@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import random
+import copy
+
 inf = float('Inf')
+A, B, C = range(0,3)
 
 def Johnson(d):
     n = np.size(d, 0)
@@ -16,6 +19,21 @@ def Johnson(d):
         G.append(i) if j == A else D.insert(0, i)
         X.remove(i)
     return G + D
+
+def evalutation(d, k, pi, pi_prime):
+    tA = sum([d[i,A] for i in pi])
+    dk = sum(d[k,:]) # Durée minimale de la tâche k
+    b = tA + dk + sum(min(d[i,A], d[i,C]) for i in pi_prime[pi_prime != k])
+    binf, bsup = b-tA, b
+    return binf, bsup
+
+def Arbo(d, pi, pi_prime, profondeur):
+    pbinf, pbsup = +inf, +inf
+    for k in pi_prime:
+        binf, bsup = evalutation(d, k, pi, pi_prime)
+        if binf <= pbsup and pi_prime[pi_prime != k].size != 0:
+            pbinf, pbsup = Arbo(d, pi+[k], pi_prime[pi_prime != k], profondeur+1)
+    return best_binf, best_bsup
 
 # Données type
 n, m = 3, 3 # nb taches, nb machines
@@ -34,6 +52,7 @@ a, b = 15*(a-1)+1, 15*(b-1)+100
 
 # Constrution des durées
 d = np.int32(np.random.uniform(a, b))
-
+d = np.array([[2, 3, 4],[2, 3, 5], [9, 4, 1]]) # durées taches/machines
 print(d)
 print(Johnson(d))
+print(Arbo(d, [], np.array(range(np.size(d, 0))), 0))
