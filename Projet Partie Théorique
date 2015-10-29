@@ -1,5 +1,10 @@
 # COMPLEX-Project-1
-## Question 1
+
+## *Partie 1 : algorithme approché avec garantie de performance*
+
+#### Question 1
+Soit $I$ une instance à notre problème, et $P$ une permutation arbitraire des tâches de $I$
+
 
 $\sum_{i \in I}d_A^i + d_B^i + d_C^i = \sum_{i \in I}d_A^i + \sum_{i \in I}d_B^i \sum_{i \in I}d_C^i \leq 3*max\{d_A^i,d_B^i,d_C^i\}$
 
