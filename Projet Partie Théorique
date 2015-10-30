@@ -18,7 +18,16 @@ $\sum_{i \in I}d_A^i + d_B^i + d_C^i]$ est une borne supérieur des solutions po
 
 Donc l'ordonnancement associé à P est donc 3-approché
 
-## Partie Théorique : Questions 4 à 6
+#### Question 2 : algorithme de Johnson
+
+De même manière que dans la question 1, $\sum_{i \in I}d_A^i + d_B^i$ est une borne supérieure aux solutions possibles de la permutation.
+
+ On a donc $2 \geq \frac{\sum_{i \in I}d_A^i + d_B^i}{OPT}$
+
+ l'ordonnancement obtenu est donc 2-approché.
+
+
+## *Partie 2 Méthode exacte*
 
 Conditions Initiales
 
