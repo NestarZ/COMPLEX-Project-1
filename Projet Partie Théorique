@@ -25,6 +25,8 @@ De même manière que dans la question 1, $\sum_{i \in I}d_A^i + d_B^i$ est une 
  On a donc $2 \geq \frac{\sum_{i \in I}d_A^i + d_B^i}{OPT}$
 
  l'ordonnancement obtenu est donc 2-approché.
+ 
+ la complexité de cet algorithme est linéaire, car à chaque itération on choisit la tâche dont la durée dans la machine A ou dans la machine C est minimale. 
 
 
 ## *Partie 2 Méthode exacte*
