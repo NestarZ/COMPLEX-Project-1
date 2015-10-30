@@ -93,3 +93,17 @@ de même manière, on a
 $$ b_B' = t_B^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k}min\{d_B^i,d_C^i\} $$
 
 $$ b_C' = t_C^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k } d_C^i $$
+
+
+
+### Question 8
+
+Nous pourrions classer les données en fonction des durées des tâches dans les machines $A$, $B$ et $C$. Par exemple nous pourrions commencer la recherche par les tâches dont la durée dans la machine $A$ est la plus petite.
+
+### Question 9
+Par récurrence nous pouvons trouver tous les minorants $b_J'$ ou J est une machine quelleconque parmi les $k$ machines.
+
+### Question 10
+
+Pour un nombre fixé $k$, si le nombre de machines dépasse $k$ on arrête la recherche arborescente au n-ième noeud. Cela va réduire le temps de traitement de l'algorithme mais néanmoins donner une solution approchée au problème.
+
