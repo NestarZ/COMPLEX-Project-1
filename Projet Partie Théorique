@@ -107,3 +107,19 @@ Par récurrence on peut trouver tous les minorants $b_J'$ où J est une machine 
 ### Question 10
 
 Pour un nombre fixé $k$, si le nombre de machines dépasse $k$ on arrête la recherche arborescente au n-ième noeud. Cela va réduire le temps de traitement de l'algorithme mais néanmoins donner une solution approchée au problème.
+
+
+
+## *Partie 3 : Analyse expérimentale et étude comparative des différentes méthodes*
+
+### Comparaision entre les deux méthodes :
+
+
+1. par rapport au nombre de tâches
++ La qualité des solutions retournées
++ la compléxité temporelle
+
+2. par rapport au nombre de machines
+
+
+### Test de performance sur les différents types de tâches
