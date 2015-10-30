@@ -97,15 +97,13 @@ $$ b_B' = t_B^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k}min\{d_B^i,d_C^i\}
 $$ b_C' = t_C^\pi + (d_A^k+d_B^k+d_C^k) + \sum_{i \in \pi' /k } d_C^i $$
 
 
-
 ### Question 8
 
-Nous pourrions classer les données en fonction des durées des tâches dans les machines $A$, $B$ et $C$. Par exemple nous pourrions commencer la recherche par les tâches dont la durée dans la machine $A$ est la plus petite.
+On peut classer les données en fonction des durées des tâches dans les machines $A$, $B$ et $C$, ce qui va réduire le temps de recherche par rapport à une méthode dont l'ordre de recherche des permutations est aléatoire. Par exemple on peut priotiser la recherche par avec les tâches dont la durée dans la machine $A$ est la plus petite.
 
 ### Question 9
-Par récurrence nous pouvons trouver tous les minorants $b_J'$ ou J est une machine quelleconque parmi les $k$ machines.
+Par récurrence on peut trouver tous les minorants $b_J'$ où J est une machine quelle conque parmi les $k$ machines. Donc on peut adapter cette méthode arborescente à $k$ machines. Cependant la compléxité temporelle va augmenter de façon exponentielle (avec chaque machine, le nombre de noeuds de l'arbre de recherche augemente aussi), donc cette méthode n'est peut être pas adapté à un nombre $k$ très grand.
 
 ### Question 10
 
 Pour un nombre fixé $k$, si le nombre de machines dépasse $k$ on arrête la recherche arborescente au n-ième noeud. Cela va réduire le temps de traitement de l'algorithme mais néanmoins donner une solution approchée au problème.
-
