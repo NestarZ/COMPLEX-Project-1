@@ -14,7 +14,9 @@ Donc $OPT \geq \frac{\sum_{i \in I}d_A^i + d_B^i + d_C^i}{3}$
 
 Donc  $3 \geq \frac{\sum_{i \in I}d_A^i + d_B^i + d_C^i}{OPT}$
 
-L'ordonnancement associé à P est donc 3-approché
+$\sum_{i \in I}d_A^i + d_B^i + d_C^i]$ est une borne supérieur des solutions possibles de $P$
+
+Donc l'ordonnancement associé à P est donc 3-approché
 
 ## Partie Théorique : Questions 4 à 6
 
