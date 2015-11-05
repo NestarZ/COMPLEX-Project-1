@@ -1,4 +1,4 @@
-# COMPLEX-Project-1
+# Machine scheduling (COMPLEX)
 ## Partie Théorique : Questions 4 à 6
 
 pi = début de la permutation des tâches
