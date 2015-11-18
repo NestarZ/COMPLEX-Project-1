@@ -85,7 +85,7 @@ if __name__ == "__main__":
     # inférieur au score de la solution courante
     a = 0.4
     # test(a)
-    max_taches = 7
+    max_taches = 5
     #main(john_.__name__, max_taches)
     main(arbre_.__name__, max_taches, alpha=0)
     plt.show()
